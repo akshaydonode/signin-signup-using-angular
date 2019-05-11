@@ -10,12 +10,9 @@ import { UserEventlistComponent } from './event/user-event-list.component';
 import { NotificationComponent } from './notification/notification.component';
 import { ChatComponent } from './chat/chat.component';
 import { RoomSpaceComponent } from './Room-space/room-space.component';
-
-
-
-
-
-
+import { UserService } from './user.service';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [
@@ -29,6 +26,8 @@ import { RoomSpaceComponent } from './Room-space/room-space.component';
         RoomSpaceComponent
     ],
     imports: [
+        FormsModule,
+        HttpClientModule,
         BrowserModule,
         RouterModule.forChild(userRoutes),
 
@@ -36,7 +35,8 @@ import { RoomSpaceComponent } from './Room-space/room-space.component';
     exports: [
         UserComponent,
         RouterModule
-    ]
+    ],
+    providers:[UserService]
 })
 export class UserModule {
 }

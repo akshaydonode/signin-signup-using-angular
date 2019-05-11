@@ -1,10 +1,12 @@
 import { Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { WelcomeLoginComponent } from './wecome-login.component';
 
 
 
 export const appRoutes: Routes=[
-    {path:"home",component:AppComponent},
-    {path:"user",component:AppComponent}
+    {path:"",component:WelcomeLoginComponent},
+    {path:"user",component:AppComponent},
+    // {path: '',component: AppComponent}
     
 ];

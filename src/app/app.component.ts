@@ -1,7 +1,8 @@
 
 import { Component } from '@angular/core';
-import { Alert } from 'selenium-webdriver';
 import { Router } from '@angular/router';
+import { Login } from './app';
+import { LoginService } from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -10,21 +11,44 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
-  submitted:boolean;
+  // user: Login;
 
-  constructor(private router: Router) { }
+  // submitted: boolean;
 
-  authenticate(){
-    this.submitted = true;
-    console.log("form");
-    // alert("form submitted");
-    
-    this.router.navigate(["user"]);
-  }
+  // constructor(private router: Router, private loginService: LoginService) { }
 
-  abc(){
-    this.submitted=true; 
-  }
+  // ngOnInit() {
+  //   this.user = new Login();
+  // }
+
+  // loginUser() {
+  //   alert("login method");
+  //   //  this.submitted = true;
+  //   console.log("form");
+  //   console.log(this.user);
+
+  //   let password = (<HTMLInputElement>document.getElementById("password")).value;
+  //   let email = (<HTMLInputElement>document.getElementById("email")).value;
+
+  //   this.loginService.loginUser(email, password).subscribe((data) => {
+  //     alert("Login Successful");
+  //     console.log(data);
+  //     alert(data.email);
+  //     if (data != null) {
+  //       if(data.email == "admin" && data.password == "admin"){
+  //         this.router.navigate(["admin"]);
+  //       }else{
+  //       this.router.navigate(["user"]);
+  //       }
+  //     }
+
+  //   });
+  //   //alert("enter correct credentials");
+  // }
+
+  // abc() {
+  //   this.submitted = true;
+  // }
 
 
 }

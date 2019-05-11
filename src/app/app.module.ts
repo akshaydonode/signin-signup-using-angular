@@ -7,12 +7,17 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { UserModule } from './user/user.module';
 import { RegistrationModule } from './registration/registration.module';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginService } from './app.service';
+import { WelcomeLoginComponent } from './wecome-login.component';
+
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WelcomeLoginComponent
   ],
   imports: [
     BrowserModule,
@@ -20,9 +25,12 @@ import { RegistrationModule } from './registration/registration.module';
     RouterModule.forRoot(appRoutes),
     FormsModule,
     UserModule,
+    HttpClientModule,
     RegistrationModule
   ],
-  providers: [],
+  providers: [
+    LoginService
+  ],
   bootstrap: [
     AppComponent,
     
